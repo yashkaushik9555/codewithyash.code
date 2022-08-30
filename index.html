@@ -131,6 +131,7 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                         <form onsubmit="sendemail(); reset(); return false;">
                         <div class="control-group">
                             <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="name" required="" placeholder="Name"><label class="form-label">NAME</label><small class="form-text text-danger help-block"></small></div>
                         </div>
@@ -146,6 +147,7 @@
                         <div id="success"></div>
                         <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
                     </form>
+                       </from>
                 </div>
             </div>
         </div>
@@ -297,12 +299,12 @@
                    <script>
                       function sendemail(){
                          Email.send({
-    Host : "smtp.yourisp.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
-    Subject : "This is the subject",
+    Host : "smtp.gmail.com",
+    Username : "yashsharma56000@gmail.com",
+    Password : "9998887766",
+    To : 'yashkaushik955@gmail.com',
+    From : "document.getElementById("email").value,
+    Subject : "new equery",
     Body : "And this is the body"
 }).then(
   message => alert(message)
